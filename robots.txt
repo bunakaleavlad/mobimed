@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://mobimedx.com/sitemap.xml
+
+# Crawl delay for polite crawling
+Crawl-Delay: 10

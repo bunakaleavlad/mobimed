@@ -1,0 +1,139 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ціни на послуги | MobiMedx Чорноморськ</title>
+    <meta name="description" content="Прайс-лист на послуги виклику медсестри та постановки крапельниць вдома. Дізнатися вартість послуг MobiMedx. | Прайс-лист на услуги вызова медсестры и постановки капельниц на дому в Черноморске и Одесской области. Узнать стоимость услуг MobiMedx.">
+    <link rel="canonical" href="https://mobimedx.com/prices.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="styles.css" media="all" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo-wrapper" style="display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1;">
+          <a class="logo" href="index.html" aria-label="На головну MobiMedx"><img src="img/mobimedx.png" alt="MobiMedx - логотип" width="200" height="60" loading="lazy" decoding="async" /></a>
+          <a href="tel:+380732810340" class="header-phone">+38 (073) 281 03 40</a>
+        </div>
+        <input type="checkbox" id="check" name="check" />
+        
+        <label for="check" aria-label="Відкрити меню" class="mobile-menu-toggle"><span style="display: flex; align-items: center; justify-content: center;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: block;"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></span><span style="display:none;">Меню</span></label>
+        <label for="check" class="menu-backdrop"></label>
+        <nav>
+          <ul class="nav">
+            <li><a href="index.html">ГОЛОВНА</a></li>
+            <li class="sub-button">
+              <a class="sub-button1" aria-haspopup="true" tabindex="0" role="button">ПОСЛУГИ</a>
+              <ul class="sub-menu" role="menu">
+                <li><a href="nurse.html">Медсестра вдома</a></li>
+                <li><a href="iv-home.html">Крапельниця вдома</a></li>
+                <li><a href="alc.html">Крапельниця від алкоголю</a></li>
+                <li><a href="poisoning.html">Крапельниця при отруєнні</a></li>
+                <li><a href="immunity.html">Крапельниця для імунітету</a></li>
+                <li><a href="beauty.html">Крапельниця Попелюшка</a></li>
+                <li><a href="detox.html">Крапельниця Детокс</a></li>
+              </ul>
+            </li>
+            <li><a href="prices.html">ЦІНИ</a></li>
+            <li><a href="about.html">ПРО НАС</a></li>
+            <li><a href="#massage">КОНТАКТИ</a></li>
+            <li class="nav-number"><a href="tel:+380732810340">+38 (073) 281 03 40</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="sector-about" style="padding: 130px 5% 40px; display: block; max-width: 800px; margin: 0 auto; width: 100%; box-sizing: border-box;">
+        <div class="text-about" style="text-align: center; width: 100%;">
+          <h1>Ціни на послуги</h1>
+          <p style="margin-bottom: 2rem; color: #475569;">Ознайомтеся з актуальними цінами на медичні послуги з виїздом додому.</p>
+          <div style="overflow-x: auto; background: #fff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); padding: 1rem; margin-bottom: 3rem;">
+            <table style="width: 100%; min-width: 400px; border-collapse: collapse; text-align: left;">
+              <thead>
+                <tr style="border-bottom: 2px solid #e2e8f0;">
+                  <th style="padding: 1rem; font-weight: 600; color: #1e293b;">Послуга</th>
+                  <th style="padding: 1rem; font-weight: 600; color: #1e293b; width: 140px; text-align: right;">Вартість</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom: 1px solid #f1f5f9;">
+                  <td style="padding: 1rem; color: #475569;">Виїзд медсестри (уколи)</td>
+                  <td style="padding: 1rem; text-align: right; font-weight: 600; color: #5b84d0;">від <span id="price-nurse">600</span> грн</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #f1f5f9;">
+                  <td style="padding: 1rem; color: #475569;">Крапельниця вдома (базова)</td>
+                  <td style="padding: 1rem; text-align: right; font-weight: 600; color: #5b84d0;">від <span id="price-iv-home">600</span> грн</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #f1f5f9;">
+                  <td style="padding: 1rem; color: #475569;">Крапельниця для імунітету</td>
+                  <td style="padding: 1rem; text-align: right; font-weight: 600; color: #5b84d0;"><span id="price-immunity">1600</span> грн</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #f1f5f9;">
+                  <td style="padding: 1rem; color: #475569;">Крапельниця Попелюшка</td>
+                  <td style="padding: 1rem; text-align: right; font-weight: 600; color: #5b84d0;"><span id="price-beauty">1900</span> грн</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #f1f5f9;">
+                  <td style="padding: 1rem; color: #475569;">Крапельниця Детокс</td>
+                  <td style="padding: 1rem; text-align: right; font-weight: 600; color: #5b84d0;"><span id="price-detox">2900</span> грн</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #f1f5f9;">
+                  <td style="padding: 1rem; color: #475569;">Крапельниця при отруєнні</td>
+                  <td style="padding: 1rem; text-align: right; font-weight: 600; color: #5b84d0;">від <span id="price-poisoning">2900</span> грн</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #f1f5f9;">
+                  <td style="padding: 1rem; color: #475569;">Крапельниця від алкоголю / виведення із запою</td>
+                  <td style="padding: 1rem; text-align: right; font-weight: 600; color: #5b84d0;">від <span id="price-alc">3800</span> грн</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section class="sector-massage" id="massage">
+        <h2>Контакти</h2>
+        <div class="massage-container">
+          <div class="contact-us">
+            <p>Години роботи: цілодобово 24/7</p>
+            <p>Безкоштовна консультація</p>
+            <p>
+              Номер телефону: <a href="tel:+380732810340">+38 (073) 281 03 40</a>
+            </p>
+            <div class="social-btns-container" style="margin-top: 15px;">
+              <a href="https://t.me/mobimedx" target="_blank" class="social-btn social-btn-tg">Telegram</a>
+              <a href="viber://chat?number=%2B380732810340" target="_blank" class="social-btn social-btn-vb">Viber</a>
+              <a href="https://wa.me/380732810340" target="_blank" class="social-btn social-btn-wa">WhatsApp</a>
+            </div>
+          </div>
+          <div class="application">
+            <form id="tg" class="tg">
+              <div class="form-control">
+                <input
+                  type="tel"
+                  class="form-control"
+                  name="user_phone"
+                  id="user_phone"
+                  placeholder="+380XXXXXXXXX"
+                  value="+380"
+                  minlength="13"
+                  maxlength="13"
+                  aria-label="Номер телефону"
+                /><button class="contact" type="submit">Безкоштовна консультація</button>
+              </div>
+              <div id="success">Повідомлення надіслано</div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p style="margin-bottom: 5px;">Базування: м. Чорноморськ, проспект Миру</p>
+      <p>&copy; MobiMedx — Медсестра вдома. 2019-2026</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
