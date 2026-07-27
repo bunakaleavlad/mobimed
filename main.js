@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-
     let startX = 0;
     document.addEventListener('touchstart', e => {
         startX = e.changedTouches[0].screenX;
@@ -57,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         iv_home: 600,
         poisoning: 2900
     };
+
     for (const key in PRICES) {
         const id = 'price-' + key.replace('_', '-');
         const el = document.getElementById(id);
@@ -65,35 +65,75 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Form Submit Handling
-    const tgForm = document.getElementById("tg");
-    if (tgForm) {
-        tgForm.addEventListener("submit", function (e) {
-            e.preventDefault();
-            const CHAT_ID = "410783080";
-            const URI_API = "https://api.telegram.org/bot7974988414:AAHZy2qsU9XD-4Wtsq5tN-phJvJ_So4VnvM/sendMessage";
-            
-            let massage = "<b>Заявка с сайта:</b>\n";
-            const phoneInput = document.getElementById("user_phone");
-            if (phoneInput) {
-                massage += phoneInput.value;
+    // Form Submit Handling (Telegram Bot)
+    const tgForms = document.querySelectorAll("form#tg, form#contactForm");
+    
+    tgForms.forEach(tgForm => {
+        tgForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // Дані для підключення
+            const BOT_TOKEN = '7974988414:AAFdwmrO3nW31tluHFA7tVgclsvokDedzH8';
+            const CHAT_ID = '410783080';
+
+            // Шукаємо поля вводу в поточній формі
+            const nameInput = tgForm.querySelector('input[name="userName"], input#userName');
+            const phoneInput = tgForm.querySelector('input[name="userPhone"], input#userPhone, input[name="user_phone"], input#user_phone');
+
+            const name = nameInput ? nameInput.value.trim() : 'Не вказано';
+            const phone = phoneInput ? phoneInput.value.trim() : '';
+
+            if (!phone || phone.length < 10) {
+                alert('Будь ласка, введіть коректний номер телефону');
+                return;
             }
 
-            if (typeof axios !== 'undefined') {
-                axios.post(URI_API, {
-                    chat_id: CHAT_ID,
-                    parse_mode: "html",
-                    text: massage,
-                }).then((res) => {
-                    if (phoneInput) phoneInput.value = "";
-                    const success = document.getElementById("success");
-                    if (success) success.style.display = "block";
-                }).catch(err => {
-                    console.error("Ошибка отправки заявки", err);
-                });
-            } else {
-                console.error("Axios не загружен");
-            }
+            const text = '📝 Нова заявка з сайту\n\n' +
+                '👤 Ім\'я: ' + name + '\n' +
+                '📱 Телефон: ' + phone + '\n\n' +
+                '🕒 Час: ' + new Date().toLocaleString('uk-UA');
+
+            // iframe для обходу CORS
+            const iframe = document.createElement('iframe');
+            iframe.name = 'hidden_frame_' + Date.now();
+            iframe.style.display = 'none';
+            document.body.appendChild(iframe);
+
+            const form = document.createElement('form');
+            form.method = 'POST';
+            form.action = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+            form.target = iframe.name;
+
+            const chatField = document.createElement('input');
+            chatField.type = 'hidden';
+            chatField.name = 'chat_id';
+            chatField.value = CHAT_ID;
+            form.appendChild(chatField);
+
+            const textField = document.createElement('input');
+            textField.type = 'hidden';
+            textField.name = 'text';
+            textField.value = text;
+            form.appendChild(textField);
+
+            document.body.appendChild(form);
+            form.submit();
+
+            // Сповіщення про успіх
+            alert('✅ Заявку надіслано! Ми зв\'яжемося з вами найближчим часом.');
+            
+            // Очищення форми
+            if (phoneInput) phoneInput.value = '';
+            if (nameInput) nameInput.value = '';
+            
+            const success = tgForm.querySelector("#success");
+            if (success) success.style.display = "block";
+
+            // Видалення тимчасових елементів
+            setTimeout(() => {
+                if (document.body.contains(form)) document.body.removeChild(form);
+                if (document.body.contains(iframe)) document.body.removeChild(iframe);
+            }, 3000);
         });
-    }
+    });
 });
