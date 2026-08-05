@@ -1,208 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Головна RU -->
+  <!-- Головна сторінка -->
   <url>
-    <loc>https://mobimedx.com/</loc>
-    <lastmod>2026-08-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://mobimedx.com/"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://mobimedx.com/ua/"/>
-  </url>
-
-  <!-- Головна UA -->
-  <url>
-    <loc>https://mobimedx.com/ua/</loc>
+    <loc>https://www.mobimedx.com/</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://mobimedx.com/ua/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://mobimedx.com/"/>
   </url>
 
   <!-- ABOUT -->
   <url>
-    <loc>https://mobimedx.com/about.html</loc>
+    <loc>https://www.mobimedx.com/about.html</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://mobimedx.com/about.html"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://mobimedx.com/ua/about.html"/>
-  </url>
-
-  <url>
-    <loc>https://mobimedx.com/ua/about.html</loc>
-    <lastmod>2026-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://mobimedx.com/ua/about.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://mobimedx.com/about.html"/>
   </url>
 
   <!-- ALCOHOL -->
   <url>
-    <loc>https://mobimedx.com/alc.html</loc>
+    <loc>https://www.mobimedx.com/alc.html</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://mobimedx.com/alc.html"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://mobimedx.com/ua/alc.html"/>
-  </url>
-
-  <url>
-    <loc>https://mobimedx.com/ua/alc.html</loc>
-    <lastmod>2026-08-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://mobimedx.com/ua/alc.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://mobimedx.com/alc.html"/>
   </url>
 
   <!-- IV HOME -->
   <url>
-    <loc>https://mobimedx.com/iv-home.html</loc>
+    <loc>https://www.mobimedx.com/iv-home.html</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://mobimedx.com/iv-home.html"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://mobimedx.com/ua/iv-home.html"/>
-  </url>
-
-  <url>
-    <loc>https://mobimedx.com/ua/iv-home.html</loc>
-    <lastmod>2026-08-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://mobimedx.com/ua/iv-home.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://mobimedx.com/iv-home.html"/>
   </url>
 
   <!-- NURSE -->
   <url>
-    <loc>https://mobimedx.com/nurse.html</loc>
+    <loc>https://www.mobimedx.com/nurse.html</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://mobimedx.com/nurse.html"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://mobimedx.com/ua/nurse.html"/>
-  </url>
-
-  <url>
-    <loc>https://mobimedx.com/ua/nurse.html</loc>
-    <lastmod>2026-08-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://mobimedx.com/ua/nurse.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://mobimedx.com/nurse.html"/>
   </url>
 
   <!-- POISONING -->
   <url>
-    <loc>https://mobimedx.com/poisoning.html</loc>
+    <loc>https://www.mobimedx.com/poisoning.html</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://mobimedx.com/poisoning.html"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://mobimedx.com/ua/poisoning.html"/>
-  </url>
-
-  <url>
-    <loc>https://mobimedx.com/ua/poisoning.html</loc>
-    <lastmod>2026-08-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://mobimedx.com/ua/poisoning.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://mobimedx.com/poisoning.html"/>
   </url>
 
   <!-- IMMUNITY -->
   <url>
-    <loc>https://mobimedx.com/immunity.html</loc>
+    <loc>https://www.mobimedx.com/immunity.html</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://mobimedx.com/immunity.html"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://mobimedx.com/ua/immunity.html"/>
-  </url>
-
-  <url>
-    <loc>https://mobimedx.com/ua/immunity.html</loc>
-    <lastmod>2026-08-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://mobimedx.com/ua/immunity.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://mobimedx.com/immunity.html"/>
   </url>
 
   <!-- BEAUTY -->
   <url>
-    <loc>https://mobimedx.com/beauty.html</loc>
+    <loc>https://www.mobimedx.com/beauty.html</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://mobimedx.com/beauty.html"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://mobimedx.com/ua/beauty.html"/>
-  </url>
-
-  <url>
-    <loc>https://mobimedx.com/ua/beauty.html</loc>
-    <lastmod>2026-08-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://mobimedx.com/ua/beauty.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://mobimedx.com/beauty.html"/>
   </url>
 
   <!-- DETOX -->
   <url>
-    <loc>https://mobimedx.com/detox.html</loc>
+    <loc>https://www.mobimedx.com/detox.html</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://mobimedx.com/detox.html"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://mobimedx.com/ua/detox.html"/>
-  </url>
-
-  <url>
-    <loc>https://mobimedx.com/ua/detox.html</loc>
-    <lastmod>2026-08-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://mobimedx.com/ua/detox.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://mobimedx.com/detox.html"/>
   </url>
 
   <!-- PRICES -->
   <url>
-    <loc>https://mobimedx.com/prices.html</loc>
+    <loc>https://www.mobimedx.com/prices.html</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://mobimedx.com/prices.html"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://mobimedx.com/ua/prices.html"/>
-  </url>
-
-  <url>
-    <loc>https://mobimedx.com/ua/prices.html</loc>
-    <lastmod>2026-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://mobimedx.com/ua/prices.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://mobimedx.com/prices.html"/>
   </url>
 
   <!-- PRIVACY -->
   <url>
-    <loc>https://mobimedx.com/privacy.html</loc>
-    <lastmod>2026-08-05</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.30</priority>
-  </url>
-
-  <url>
-    <loc>https://mobimedx.com/ua/privacy.html</loc>
+    <loc>https://www.mobimedx.com/privacy.html</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.30</priority>
@@ -210,14 +91,7 @@
 
   <!-- TERMS -->
   <url>
-    <loc>https://mobimedx.com/terms.html</loc>
-    <lastmod>2026-08-05</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.30</priority>
-  </url>
-
-  <url>
-    <loc>https://mobimedx.com/ua/terms.html</loc>
+    <loc>https://www.mobimedx.com/terms.html</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.30</priority>
