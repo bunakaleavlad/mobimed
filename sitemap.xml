@@ -79,18 +79,5 @@
     <priority>0.3</priority>
   </url>
 
-  <!-- Нові статті (Крапельниця для шкіри) -->
-  <url>
-    <loc>https://www.mobimedx.com/krapelnytsya-dlya-shkiry.html</loc>
-    <lastmod>2026-08-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.mobimedx.com/kapelnitsa-dlya-kozhi.html</loc>
-    <lastmod>2026-08-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
 
 </urlset>
