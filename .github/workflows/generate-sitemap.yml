@@ -1,0 +1,78 @@
+name: Generate Sitemap
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  sitemap:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Create sitemap generator script
+        run: |
+          cat << 'EOF' > generate-sitemap.js
+          const fs = require('fs');
+          const path = require('path');
+          const BASE_URL = 'https://mobimedx.com';
+          const EXCLUDED_FILES = ['404.html', 'generate-sitemap.js', 'server.js', 'package.json', 'package-lock.json', 'README.md', '_redirects'];
+          function getAllHtmlFiles(dir, fileList = []) {
+            const files = fs.readdirSync(dir);
+            files.forEach((file) => {
+              const filePath = path.join(dir, file);
+              const stat = fs.statSync(filePath);
+              if (stat.isDirectory()) {
+                getAllHtmlFiles(filePath, fileList);
+              } else if (file.endsWith('.html') && !EXCLUDED_FILES.includes(file)) {
+                fileList.push(filePath);
+              }
+            });
+            return fileList;
+          }
+          function generateSitemap(files) {
+            const today = new Date().toISOString().split('T')[0];
+            let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
+            xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+            xml += `  <url>\n    <loc>${BASE_URL}/</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>daily</changefreq>\n    <priority>1.0</priority>\n  </url>\n`;
+            files.forEach((file) => {
+              let urlPath = file.replace(/\\/g, '/');
+              if (urlPath.startsWith('./')) urlPath = urlPath.slice(1);
+              if (urlPath.startsWith('/')) urlPath = urlPath.slice(1);
+              const url = `${BASE_URL}/${urlPath}`;
+              xml += `  <url>\n    <loc>${url}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n`;
+            });
+            xml += '</urlset>';
+            return xml;
+          }
+          try {
+            console.log('🔍 Scanning files...');
+            const htmlFiles = getAllHtmlFiles(__dirname);
+            console.log(`✅ Found ${htmlFiles.length} HTML files.`);
+            const sitemapContent = generateSitemap(htmlFiles);
+            fs.writeFileSync(path.join(__dirname, 'sitemap.xml'), sitemapContent);
+            console.log('✅ sitemap.xml generated successfully!');
+          } catch (error) {
+            console.error('❌ Error:', error.message);
+          }
+          EOF
+
+      - name: Run sitemap generator
+        run: node generate-sitemap.js
+
+      - name: Commit and push sitemap.xml
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add sitemap.xml
+          git diff --quiet && git diff --staged --quiet || git commit -m "chore: auto-update sitemap.xml"
+          git push
